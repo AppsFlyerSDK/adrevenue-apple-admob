@@ -39,29 +39,29 @@ In your UIViewController, where you use AdMob add:
 @import AppsFlyerAdRevenueAdMob;
 ```
 
-### Api:
-```objective-c
-- (void)handleGADAdValue:(GADAdValue *)value WithAppOpenAd:(GADAppOpenAd *)ad adUnitId:(NSString *)adUnitId;
-- (void)handleGADAdValue:(GADAdValue *)value WithRewardedAd:(GADRewardedAd *)ad;
-- (void)handleGADAdValue:(GADAdValue *)value WithNativeAd:(GADNativeAd *)ad adUnitId:(NSString *)adUnitId;
-- (void)handleGADAdValue:(GADAdValue *)value WithBanner:(GADBannerView *)banner;
-- (void)handleGADAdValue:(GADAdValue *)value WithInterstitial:(GADInterstitialAd *)ad;
-```
 ### Usage
-#### Banner
-
+AppsFlyerAdRevenueAdMob provides 1 api that replace the ad's `setPaidEventHandler`. You should use AppsFlyerAdRevenueAdMob api and NOT the ad's api:<br>
 ```objective-c
++ (void)setPaidEventHandlerForTarget:(id)target
+                            adUnitId:(NSString *)adUnitId
+                        eventHandler:(AdMobEventHandler)eventHandler;
+```
+#### Banner
+```objective-c
+self.bannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeBanner;
+//
 // ...Banner configurations
-[self.bannerView setPaidEventHandler:^(GADAdValue * _Nonnull value) {
-    [[AppsFlyerAdRevenueAdMob shared] handleGADAdValue:value WithBanner:bannerAd];
+//
+[AppsFlyerAdRevenueAdMob setPaidEventHandlerForTarget:self.bannerView adUnitId:@"ca-app-pub-id" eventHandler:^(GADAdValue * _Nonnull value) {
+        // do more actions with GADAdValue
 }];
 ```
 
 #### Interstitial ad
 ```objective-c
 // ...Interstitial ad configurations
-[self.interstitial setPaidEventHandler:^(GADAdValue * _Nonnull value) {
-    [[AppsFlyerAdRevenueAdMob shared] handleGADAdValue:value WithInterstitial:interstitialAd];
+[AppsFlyerAdRevenueAdMob setPaidEventHandlerForTarget:interstitialAd adUnitId:@"ca-app-pub-id" eventHandler:^(GADAdValue * _Nonnull value) {
+        // do more actions with GADAdValue
 }];
 ```
 
@@ -71,26 +71,27 @@ In your UIViewController, where you use AdMob add:
 
     // <~+~ Use this api inside didReceivedNativeAd delegate ~+~>
 
-    GADNativeAdView *nativeAdView = self.nativeAdView;
-    [nativeAd setPaidEventHandler:^(GADAdValue * _Nonnull value) {
-        [[AppsFlyerAdRevenueAdMob shared] handleGADAdValue:value WithNativeAd:nativeAd adUnitId:@"ca-app-pub-adUnitId"];
+    [AppsFlyerAdRevenueAdMob setPaidEventHandlerForTarget:nativeAd adUnitId:TestAdUnit eventHandler:^(GADAdValue * _Nonnull value) {
+        // do more actions with GADAdValue
     }];
-    // ....
+// ....
 }
 ```
 
 #### Rewarded ad
 ```objective-c
 // ...Rewarded ad configurations
-[self.rewardedAd setPaidEventHandler:^(GADAdValue * _Nonnull value) {
-    [[AppsFlyerAdRevenueAdMob shared] handleGADAdValue:value WithRewardedAd:rewardedAd];
+self.rewardedAd = ad;
+[AppsFlyerAdRevenueAdMob setPaidEventHandlerForTarget:[self rewardedAd] adUnitId:@"ca-app-pub-id" eventHandler:^(GADAdValue * _Nonnull value) {
+    // do more actions with GADAdValue       
 }];
 ```
 
 #### App open
 ```objective-c
 // ...App open ad configurations
-[self.appOpenAd setPaidEventHandler:^(GADAdValue * _Nonnull value) {
-    [[AppsFlyerAdRevenueAdMob shared] handleGADAdValue:value WithAppOpenAd:appOpenAd adUnitId:@"ca-app-pub-adUnitId"];
+self->_appOpenAd = appOpenAd;
+[AppsFlyerAdRevenueAdMob setPaidEventHandlerForTarget:self->_appOpenAd adUnitId:@"ca-app-pub-id" eventHandler:^(GADAdValue * _Nonnull value) {
+    // do more actions with GADAdValue       
 }];
 ```
