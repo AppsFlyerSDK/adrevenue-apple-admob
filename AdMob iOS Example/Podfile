@@ -1,0 +1,9 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+target 'AdMob iOS Example' do
+  use_frameworks!
+
+  pod 'AppsFlyer-AdRevenue-AdMob', :git => 'https://github.com/AppsFlyerSDK/adrevenue-apple-admob.git'
+
+end
