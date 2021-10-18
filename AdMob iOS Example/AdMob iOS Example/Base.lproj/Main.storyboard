@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-sN-MBp">
+                                <rect key="frame" x="142" y="101" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move app to the background and return  to see app open ad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-L9-EWm">
+                                <rect key="frame" x="56.5" y="145" width="301.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpZ-md-g61">
+                                <rect key="frame" x="121" y="271" width="172" height="30"/>
+                                <state key="normal" title="Rewarded video example"/>
+                                <connections>
+                                    <segue destination="aOb-85-biD" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="inW-OV-HMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkK-aT-SWR">
+                                <rect key="frame" x="144" y="343" width="126" height="30"/>
+                                <state key="normal" title="Native ad example"/>
+                                <connections>
+                                    <segue destination="kHw-9t-Ssy" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="0hs-k0-sfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t3-1c-EOQ">
+                                <rect key="frame" x="132" y="412" width="150" height="30"/>
+                                <state key="normal" title="Interstitial ad example"/>
+                                <connections>
+                                    <segue destination="Azi-S9-gkQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="nnS-OI-Bm3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9t3-1c-EOQ" firstAttribute="top" secondItem="YkK-aT-SWR" secondAttribute="bottom" constant="39" id="4o6-6x-Pjl"/>
+                            <constraint firstItem="YkK-aT-SWR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5DF-NZ-ZAj"/>
+                            <constraint firstItem="ODG-L9-EWm" firstAttribute="top" secondItem="dNR-sN-MBp" secondAttribute="bottom" constant="8" symbolic="YES" id="FWe-9x-hpW"/>
+                            <constraint firstItem="YkK-aT-SWR" firstAttribute="top" secondItem="vpZ-md-g61" secondAttribute="bottom" constant="42" id="J4t-dc-K0P"/>
+                            <constraint firstItem="vpZ-md-g61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lij-kh-D6z"/>
+                            <constraint firstItem="9t3-1c-EOQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Srk-4W-iQR"/>
+                            <constraint firstItem="dNR-sN-MBp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="a8m-0g-2g9"/>
+                            <constraint firstItem="vpZ-md-g61" firstAttribute="top" secondItem="ODG-L9-EWm" secondAttribute="bottom" constant="85" id="c0Z-LQ-a2l"/>
+                            <constraint firstItem="dNR-sN-MBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muG-az-kfC"/>
+                            <constraint firstItem="ODG-L9-EWm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nMK-t1-dWz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="116"/>
+        </scene>
+        <!--Native Ad View Controller-->
+        <scene sceneID="6cN-4t-8LU">
+            <objects>
+                <viewController id="kHw-9t-Ssy" customClass="NativeAdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Io9-nt-85i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-MV-vQW">
+                                <rect key="frame" x="8" y="110" width="399" height="297"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mD-sN-VUG">
+                                <rect key="frame" x="170" y="433" width="74" height="30"/>
+                                <state key="normal" title="Refresh ad"/>
+                                <connections>
+                                    <action selector="refreshAd:" destination="kHw-9t-Ssy" eventType="touchUpInside" id="vqB-Hn-nN0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SDK Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93D-9O-It5">
+                                <rect key="frame" x="159.5" y="495" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-tb-OWn">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="kHw-9t-Ssy" eventType="touchUpInside" id="zWt-fX-1oo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cyf-jW-84r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5mD-sN-VUG" firstAttribute="centerX" secondItem="Io9-nt-85i" secondAttribute="centerX" id="2zl-Lb-PgI"/>
+                            <constraint firstItem="IMY-MV-vQW" firstAttribute="top" secondItem="Cyf-jW-84r" secondAttribute="top" constant="66" id="MXs-fg-olm"/>
+                            <constraint firstItem="93D-9O-It5" firstAttribute="centerX" secondItem="Io9-nt-85i" secondAttribute="centerX" id="ZUq-Uh-Liw"/>
+                            <constraint firstItem="IMY-MV-vQW" firstAttribute="centerX" secondItem="Io9-nt-85i" secondAttribute="centerX" id="gvV-0D-c6y"/>
+                            <constraint firstItem="5mD-sN-VUG" firstAttribute="top" secondItem="IMY-MV-vQW" secondAttribute="bottom" constant="26" id="klF-aj-RTV"/>
+                            <constraint firstItem="93D-9O-It5" firstAttribute="top" secondItem="5mD-sN-VUG" secondAttribute="bottom" constant="32" id="rdM-bT-a6e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="2Sn-tb-OWn" id="UaQ-9T-qEG"/>
+                        <outlet property="nativeAdPlaceholder" destination="IMY-MV-vQW" id="pFj-kM-eru"/>
+                        <outlet property="refreshButton" destination="5mD-sN-VUG" id="0qX-Gu-VF1"/>
+                        <outlet property="versionLabel" destination="93D-9O-It5" id="8sm-3k-lQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcM-5Q-lnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227.536231884058" y="136.60714285714286"/>
+        </scene>
+        <!--Intertitial View Controller-->
+        <scene sceneID="sCE-3p-JSe">
+            <objects>
+                <viewController id="Azi-S9-gkQ" customClass="IntertitialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HOJ-q9-IKf" customClass="In">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-rS-vJk">
+                                <rect key="frame" x="108.5" y="101" width="197" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 seconds left!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLd-nL-I8B">
+                                <rect key="frame" x="133.5" y="434" width="147" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsD-wj-vnX">
+                                <rect key="frame" x="171.5" y="490" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="Azi-S9-gkQ" eventType="touchUpInside" id="8nY-4b-4iK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-Qj-xuj">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="Azi-S9-gkQ" eventType="touchUpInside" id="zgn-AH-A8I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yx6-I6-Aks"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZLd-nL-I8B" firstAttribute="top" secondItem="cgb-rS-vJk" secondAttribute="bottom" constant="294" id="BtL-eH-O64"/>
+                            <constraint firstItem="cgb-rS-vJk" firstAttribute="centerX" secondItem="HOJ-q9-IKf" secondAttribute="centerX" id="TuP-fx-10l"/>
+                            <constraint firstItem="cgb-rS-vJk" firstAttribute="top" secondItem="yx6-I6-Aks" secondAttribute="top" constant="57" id="bLS-ak-0Fd"/>
+                            <constraint firstItem="FsD-wj-vnX" firstAttribute="centerX" secondItem="HOJ-q9-IKf" secondAttribute="centerX" id="g84-r2-wzP"/>
+                            <constraint firstItem="ZLd-nL-I8B" firstAttribute="centerX" secondItem="HOJ-q9-IKf" secondAttribute="centerX" id="gcC-AW-Jr0"/>
+                            <constraint firstItem="FsD-wj-vnX" firstAttribute="top" secondItem="ZLd-nL-I8B" secondAttribute="bottom" constant="28" id="yqq-vj-y0r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameText" destination="ZLd-nL-I8B" id="kQZ-8z-C08"/>
+                        <outlet property="goBackButton" destination="Dtt-Qj-xuj" id="PUx-ZV-pVn"/>
+                        <outlet property="playAgainButton" destination="FsD-wj-vnX" id="w8O-uT-unU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUP-UK-iLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="852"/>
+        </scene>
+        <!--Rewarded Ad View Controller-->
+        <scene sceneID="0n7-AL-okt">
+            <objects>
+                <viewController id="aOb-85-biD" customClass="RewardedAdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PgQ-5k-lN0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-Av-j01">
+                                <rect key="frame" x="108.5" y="102" width="197" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3F-Ze-RUZ">
+                                <rect key="frame" x="129.5" y="171" width="155" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-qw-NHy">
+                                <rect key="frame" x="171.5" y="482" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="aOb-85-biD" eventType="touchUpInside" id="V2m-dT-LXe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-6M-c3K">
+                                <rect key="frame" x="86.5" y="570" width="241" height="30"/>
+                                <state key="normal" title="Watch Video for 10 additional coins"/>
+                                <connections>
+                                    <action selector="showVideo:" destination="aOb-85-biD" eventType="touchUpInside" id="XfB-aL-QqW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ni-xr-KqU">
+                                <rect key="frame" x="167.5" y="646" width="79" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za7-az-94B">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="aOb-85-biD" eventType="touchUpInside" id="TgI-9S-cOt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="04P-Xx-PlG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OhW-6M-c3K" firstAttribute="centerX" secondItem="PgQ-5k-lN0" secondAttribute="centerX" id="3iO-pW-w8W"/>
+                            <constraint firstItem="8Ni-xr-KqU" firstAttribute="centerX" secondItem="PgQ-5k-lN0" secondAttribute="centerX" id="4BQ-gI-xkb"/>
+                            <constraint firstItem="OhW-6M-c3K" firstAttribute="top" secondItem="xWG-qw-NHy" secondAttribute="bottom" constant="58" id="9gg-eg-XVn"/>
+                            <constraint firstItem="pfe-Av-j01" firstAttribute="centerX" secondItem="PgQ-5k-lN0" secondAttribute="centerX" id="GL9-GO-B03"/>
+                            <constraint firstItem="xWG-qw-NHy" firstAttribute="top" secondItem="z3F-Ze-RUZ" secondAttribute="bottom" constant="279" id="RD6-gx-jXa"/>
+                            <constraint firstItem="z3F-Ze-RUZ" firstAttribute="top" secondItem="pfe-Av-j01" secondAttribute="bottom" constant="30" id="Roe-Wa-sVx"/>
+                            <constraint firstItem="z3F-Ze-RUZ" firstAttribute="centerX" secondItem="PgQ-5k-lN0" secondAttribute="centerX" id="TqI-1Y-mIh"/>
+                            <constraint firstItem="pfe-Av-j01" firstAttribute="top" secondItem="04P-Xx-PlG" secondAttribute="top" constant="58" id="avA-pW-zHt"/>
+                            <constraint firstItem="8Ni-xr-KqU" firstAttribute="top" secondItem="OhW-6M-c3K" secondAttribute="bottom" constant="46" id="tRb-hZ-u2d"/>
+                            <constraint firstItem="xWG-qw-NHy" firstAttribute="centerX" secondItem="PgQ-5k-lN0" secondAttribute="centerX" id="xT8-jp-zfE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinCountLabel" destination="8Ni-xr-KqU" id="Kan-NE-MTs"/>
+                        <outlet property="gameLabel" destination="z3F-Ze-RUZ" id="A4E-iw-S7I"/>
+                        <outlet property="goBackButton" destination="za7-az-94B" id="7XE-cA-mV4"/>
+                        <outlet property="playAgainButton" destination="xWG-qw-NHy" id="QY1-es-Hjd"/>
+                        <outlet property="showVideoButton" destination="OhW-6M-c3K" id="36O-VG-R8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCx-M7-4qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="-552"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
