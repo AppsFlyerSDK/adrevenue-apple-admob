@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AppsFlyer-AdRevenue-AdMob'
-  s.version          = '1.0.0-beta2'
+  s.version          = '1.0.0-beta3'
   s.summary          = 'A short description of AppsFlyer-AdRevenue-AdMob.'
   s.description      = <<-DESC
 AppsFlyer-AdRevenue-AdMob description. Description will be added shortly.
